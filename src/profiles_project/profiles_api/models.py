@@ -11,7 +11,7 @@ class UserProfileManager(BaseUserManager):
     def create_user(self, email, name, password=None):
         """Creates a new user profile object """
 
-        if not meail:
+        if not email:
             raise ValueError('Users must have an email address.')
 
         email = self.normalize_email(email)
